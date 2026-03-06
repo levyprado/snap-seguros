@@ -1,4 +1,4 @@
-export const navLinks = [
+export const navItems = [
   { label: 'Operadoras', id: '#operadoras' },
   { label: 'Planos', id: '#planos' },
   { label: 'Benefícios', id: '#beneficios' },
