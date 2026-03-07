@@ -1,11 +1,14 @@
 import Footer from '@/components/layout/footer'
 import Header from '@/components/layout/header'
+import Hero from '@/components/sections/hero'
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main></main>
+      <main>
+        <Hero />
+      </main>
       <Footer />
     </>
   )
