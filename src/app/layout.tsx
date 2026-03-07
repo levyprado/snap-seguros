@@ -1,10 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Montserrat } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
 })
 
 export const metadata: Metadata = {
@@ -20,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR'>
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${montserrat.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   )
 }
