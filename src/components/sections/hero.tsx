@@ -21,7 +21,7 @@ export default function Hero() {
         <div className='absolute inset-0 bg-linear-to-t from-primary via-transparent via-10% to-transparent' />
       </div>
       <Container className='relative flex flex-1 items-center py-12 text-primary-foreground'>
-        <div className='flex flex-col gap-4 md:gap-6'>
+        <div className='flex flex-col gap-4 md:gap-6 xl:gap-8'>
           <h1 className='font-heading text-4xl leading-[1.125] font-extrabold text-balance md:text-5xl lg:text-6xl xl:text-7xl'>
             Plano de Saúde <br />
             <span className='text-accent'>Empresarial</span>
