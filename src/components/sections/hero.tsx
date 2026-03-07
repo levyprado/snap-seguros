@@ -17,7 +17,8 @@ export default function Hero() {
           priority
           className='object-cover'
         />
-        <div className='absolute inset-0 bg-linear-to-r from-primary/95 via-primary/85 to-primary/60' />
+        <div className='absolute inset-0 bg-linear-to-r from-primary/95 via-primary/85 to-primary/40' />
+        <div className='absolute inset-0 bg-linear-to-t from-primary via-transparent via-10% to-transparent' />
       </div>
       <Container className='relative flex flex-1 items-center py-12 text-primary-foreground'>
         <div className='flex flex-col gap-4 md:gap-6'>
