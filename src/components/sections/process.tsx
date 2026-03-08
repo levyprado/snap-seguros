@@ -1,4 +1,6 @@
 import { process } from '@/data/process'
+import { ArrowRight02Icon } from '@hugeicons/core-free-icons'
+import { Button } from '../ui/button'
 import Container from '../ui/container'
 import Icon from '../ui/icon'
 import Body from '../ui/section/body'
@@ -46,6 +48,18 @@ export default function Process() {
             </li>
           ))}
         </ol>
+
+        <div className='mt-12 text-center'>
+          <Button
+            href='#'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='px-6 shadow-md shadow-primary/40 hover:shadow-lg sm:px-8'
+          >
+            Iniciar Agora pelo WhatsApp
+            <Icon icon={ArrowRight02Icon} />
+          </Button>
+        </div>
       </Container>
     </Section>
   )
