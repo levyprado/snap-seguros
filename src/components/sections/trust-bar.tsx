@@ -17,7 +17,7 @@ const stats = [
 
 export default function TrustBar() {
   return (
-    <section className='bg-primary py-6'>
+    <section className='bg-primary py-7'>
       <Container>
         <div className='grid grid-cols-2 gap-6 md:grid-cols-4'>
           {stats.map(({ icon, label, value }) => (
