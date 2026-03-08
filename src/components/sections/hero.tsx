@@ -42,7 +42,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <p className='max-w-lg text-lg leading-relaxed text-primary-foreground/70 lg:text-xl'>
+          <p className='max-w-xl text-lg leading-relaxed text-primary-foreground/70 lg:text-xl'>
             Compare as melhores operadoras do mercado em um só lugar.
             Atendimento{' '}
             <strong className='text-primary-foreground'>
