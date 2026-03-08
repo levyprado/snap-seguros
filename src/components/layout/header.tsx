@@ -16,7 +16,7 @@ export default function Header() {
   const closeMenu = () => setIsOpen(false)
 
   return (
-    <header className='sticky top-0 left-0 z-10 w-full border-b bg-background/95 shadow-xs'>
+    <header className='sticky top-0 left-0 z-50 w-full border-b bg-background/95 shadow-xs'>
       <Container className='flex items-center justify-between py-3'>
         <a href='#' onClick={closeMenu}>
           <Image
