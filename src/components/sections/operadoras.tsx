@@ -21,7 +21,7 @@ export default function Operadoras() {
           </Body>
         </div>
 
-        <div className='relative mt-12 inline-flex w-full overflow-hidden lg:mt-16'>
+        <div className='relative inline-flex w-full overflow-hidden py-12 lg:py-16'>
           <div className='absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-background to-transparent' />
           <div className='absolute inset-y-0 right-0 z-10 w-20 bg-linear-to-l from-background to-transparent' />
 
