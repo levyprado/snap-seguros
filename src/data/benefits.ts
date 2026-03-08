@@ -24,19 +24,19 @@ export const benefits = [
     icon: HeadsetIcon,
     title: 'Atendimento Dedicado',
     description:
-      'Cada empresa é única. Analisamos suas necessidades com um consultor exclusivo via WhatsApp, email ou telefone. Resposta em até 2 horas úteis.',
+      'Esqueça os robôs intermináveis. Aqui você fala com especialistas reais através do WhatsApp, email ou telefone. Rápido e direto.',
   },
   {
     icon: Building03Icon,
     title: 'Ideal para MEI e PJ',
     description:
-      'Planos especiais para microempreendedores individuais e empresas de todos os portes. Basta ter CNPJ ativo.',
+      'Entendemos a realidade de MEIs e PJs. Buscamos soluções que ofereçam segurança sem comprometer o fluxo de caixa.',
   },
   {
     icon: FlashIcon,
-    title: 'Ativação em 24h',
+    title: 'Agilidade na Implantação',
     description:
-      'Processo simplificado sem burocracia. Seus funcionários podem usar o plano em até 24 horas.',
+      'Cuidamos de toda a burocracia para que sua equipe comece a utilizar o plano no menor tempo possível. ',
   },
   {
     icon: SecurityCheckIcon,

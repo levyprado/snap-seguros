@@ -10,7 +10,7 @@ export default function Benefits() {
   return (
     <Section id='beneficios' className='bg-secondary'>
       <Container>
-        <div className='space-y-2 text-center'>
+        <div className='space-y-2 text-center lg:space-y-3'>
           <Tagline>Benefícios Exclusivos</Tagline>
           <Headline>
             Por que mais de 400 empresas escolheram a Snap Seguros?
@@ -21,7 +21,7 @@ export default function Benefits() {
           </Body>
         </div>
 
-        <ul className='mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+        <ul className='mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-16 lg:grid-cols-3'>
           {benefits.map((benefit) => (
             <li
               key={benefit.title}
