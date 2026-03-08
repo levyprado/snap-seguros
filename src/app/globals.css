@@ -25,6 +25,7 @@
   --color-ring: var(--ring);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-montserrat);
+  --animate-infinite-scroll: infinite-scroll 40s linear infinite;
 }
 
 @layer base {
@@ -42,5 +43,16 @@
 
   button:not(:disabled) {
     @apply cursor-pointer;
+  }
+}
+
+@layer theme {
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
