@@ -4,6 +4,7 @@ import Benefits from '@/components/sections/benefits'
 import Hero from '@/components/sections/hero'
 import Operadoras from '@/components/sections/operadoras'
 import Process from '@/components/sections/process'
+import Testimonials from '@/components/sections/testimonials'
 import TrustBar from '@/components/sections/trust-bar'
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <Operadoras />
         <Benefits />
         <Process />
+        <Testimonials />
       </main>
       <Footer />
     </>
