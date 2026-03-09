@@ -51,7 +51,7 @@ export default function Testimonials() {
                     {testimonial.name}
                   </div>
                   <div className='truncate text-sm text-muted-foreground'>
-                    {testimonial.role}
+                    {testimonial.type}
                   </div>
                 </div>
               </div>
