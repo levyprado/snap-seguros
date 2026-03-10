@@ -2,6 +2,7 @@ import Footer from '@/components/layout/footer'
 import Header from '@/components/layout/header'
 import Benefits from '@/components/sections/benefits'
 import CTABanner from '@/components/sections/cta-banner'
+import FAQ from '@/components/sections/faq'
 import Hero from '@/components/sections/hero'
 import Operadoras from '@/components/sections/operadoras'
 import Process from '@/components/sections/process'
@@ -20,6 +21,7 @@ export default function Home() {
         <Process />
         <Testimonials />
         <CTABanner />
+        <FAQ />
       </main>
       <Footer />
     </>
