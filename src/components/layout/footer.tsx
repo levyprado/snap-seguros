@@ -18,7 +18,7 @@ export default function Footer() {
               className='h-12 w-auto brightness-0 invert lg:h-14'
             />
             <p className='mt-4 text-sm leading-relaxed'>
-              Representantes oficiais das maiores operadoras de saude do Brasil.
+              Representantes oficiais das maiores operadoras de saúde do Brasil.
               Atendimento personalizado para MEI, PME e grandes empresas.
             </p>
           </div>
@@ -32,7 +32,7 @@ export default function Footer() {
                 <a
                   key={item.id}
                   href={item.id}
-                  className='w-fit hover:text-accent'
+                  className='w-fit transition-colors hover:text-accent'
                 >
                   {item.label}
                 </a>
