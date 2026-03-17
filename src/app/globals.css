@@ -10,6 +10,7 @@
   --accent: #0ea5e9;
   --border: #e2e8f0;
   --ring: #1a3f7a;
+  --whatsapp: #25d366;
 }
 
 @theme inline {
@@ -23,6 +24,7 @@
   --color-accent: var(--accent);
   --color-border: var(--border);
   --color-ring: var(--ring);
+  --color-whatsapp: var(--whatsapp);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-montserrat);
   --animate-infinite-scroll: infinite-scroll 40s linear infinite;
