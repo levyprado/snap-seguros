@@ -1,6 +1,7 @@
 import Footer from '@/components/layout/footer'
 import Header from '@/components/layout/header'
 import Benefits from '@/components/sections/benefits'
+import Contact from '@/components/sections/contact'
 import CTABanner from '@/components/sections/cta-banner'
 import FAQ from '@/components/sections/faq'
 import Hero from '@/components/sections/hero'
@@ -22,6 +23,7 @@ export default function Home() {
         <Testimonials />
         <CTABanner />
         <FAQ />
+        <Contact />
       </main>
       <Footer />
     </>
