@@ -5,7 +5,7 @@ import {
   ThumbsUpIcon,
 } from '@hugeicons/core-free-icons'
 
-export const process = [
+export const steps = [
   {
     icon: ChatIcon,
     title: 'Fale Conosco',
