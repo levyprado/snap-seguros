@@ -1,5 +1,6 @@
 import Footer from '@/components/layout/footer'
 import Header from '@/components/layout/header'
+import StickyMobileCTA from '@/components/layout/sticky-mobile-cta'
 import Benefits from '@/components/sections/benefits'
 import Contact from '@/components/sections/contact'
 import CTABanner from '@/components/sections/cta-banner'
@@ -26,6 +27,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <StickyMobileCTA />
     </>
   )
 }
