@@ -101,16 +101,6 @@ Colors are defined as CSS variables in `globals.css` and exposed to Tailwind via
 
 Fonts are loaded via `next/font/google` and mapped to `--font-sans` (Inter) and `--font-heading` (Montserrat).
 
-## Deployment
-
-The project is ready to deploy on [Vercel](https://vercel.com/) with zero configuration:
-
-```bash
-vercel deploy
-```
-
-For other platforms, run `npm run build` and serve the `.next/` output.
-
 ## License
 
 Private — All rights reserved © Snap Seguros.
