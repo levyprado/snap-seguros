@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils'
 
 type ContainerProps = React.HTMLAttributes<HTMLDivElement> & {
-  children: React.ReactNode
   as?: React.ElementType
 }
 
