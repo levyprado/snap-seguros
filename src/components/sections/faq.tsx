@@ -6,10 +6,8 @@ import { ArrowDownIcon } from '@hugeicons/core-free-icons'
 import { useState } from 'react'
 import Container from '../ui/container'
 import Icon from '../ui/icon'
-import Body from '../ui/section/body'
-import Headline from '../ui/section/headline'
 import Section from '../ui/section/section'
-import Tagline from '../ui/section/tagline'
+import SectionHeader from '../ui/section/section-header'
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
@@ -21,21 +19,21 @@ export default function FAQ() {
   return (
     <Section id='faq' className='bg-secondary'>
       <Container>
-        <div className='space-y-2 text-center lg:space-y-3'>
-          <Tagline>Tire suas dúvidas</Tagline>
-          <Headline>Perguntas Frequentes</Headline>
-          <Body>
-            As perguntas mais comuns que recebemos sobre plano de saúde
-            empresarial.
-          </Body>
-        </div>
+        <SectionHeader
+          tagline='Tire suas dúvidas'
+          headline='Perguntas Frequentes'
+          body='As perguntas mais comuns que recebemos sobre plano de saúde empresarial.'
+        />
 
         <div className='mx-auto mt-12 max-w-3xl space-y-4 lg:mt-16'>
           {faqs.map((faq, index) => {
             const isOpen = activeIndex === index
 
             return (
-              <div key={index} className='rounded-xl border bg-background'>
+              <div
+                key={faq.question}
+                className='rounded-xl border bg-background'
+              >
                 <button
                   onClick={() => toggleFAQ(index)}
                   className='flex w-full cursor-pointer items-center justify-between p-5 text-left select-none'

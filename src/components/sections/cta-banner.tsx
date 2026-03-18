@@ -1,12 +1,12 @@
 import bannerImg from '@/assets/images/banner.png'
+import { WHATSAPP_URL } from '@/config/site'
 import { ArrowRight02Icon } from '@hugeicons/core-free-icons'
 import Image from 'next/image'
 import { Button } from '../ui/button'
 import Container from '../ui/container'
 import Icon from '../ui/icon'
-import Body from '../ui/section/body'
-import Headline from '../ui/section/headline'
 import Section from '../ui/section/section'
+import SectionHeader from '../ui/section/section-header'
 
 export default function CTABanner() {
   return (
@@ -16,20 +16,17 @@ export default function CTABanner() {
       </div>
 
       <Container className='relative'>
-        <div className='space-y-2 text-center lg:space-y-3'>
-          <Headline className='text-primary-foreground'>
-            Sua empresa merece o melhor plano de saúde pelo menor preço
-          </Headline>
-          <Body className='text-primary-foreground/80'>
-            Não deixe para depois. A tabela promocional atual pode mudar a
-            qualquer momento. Garanta agora os melhores valores para sua equipe.
-          </Body>
-        </div>
+        <SectionHeader
+          headline='Sua empresa merece o melhor plano de saúde pelo menor preço'
+          body='Não deixe para depois. A tabela promocional atual pode mudar a qualquer momento. Garanta agora os melhores valores para sua equipe.'
+          headlineClassName='text-primary-foreground'
+          bodyClassName='text-primary-foreground/80'
+        />
 
         <div className='mt-8 flex flex-col justify-center gap-4 sm:flex-row'>
           <Button
+            href={WHATSAPP_URL}
             variant='accent'
-            href='#'
             target='_blank'
             rel='noopener noreferrer'
           >

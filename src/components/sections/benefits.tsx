@@ -1,25 +1,19 @@
 import { benefits } from '@/data/benefits'
 import Container from '../ui/container'
 import Icon from '../ui/icon'
-import Body from '../ui/section/body'
-import Headline from '../ui/section/headline'
 import Section from '../ui/section/section'
-import Tagline from '../ui/section/tagline'
+import SectionHeader from '../ui/section/section-header'
 
 export default function Benefits() {
   return (
     <Section id='beneficios' className='bg-secondary'>
       <Container>
-        <div className='space-y-2 text-center lg:space-y-3'>
-          <Tagline>Benefícios Exclusivos</Tagline>
-          <Headline>
-            Por que mais de 400 empresas escolheram a Snap Seguros?
-          </Headline>
-          <Body>
-            Mais do que um plano de saúde, oferecemos uma experiência completa
-            de proteção e cuidado para sua equipe.
-          </Body>
-        </div>
+        <SectionHeader
+          tagline='Benefícios Exclusivos'
+          headline='Por que mais de 400 empresas escolheram a Snap Seguros?'
+          body='Mais do que um plano de saúde, oferecemos uma experiência completa
+            de proteção e cuidado para sua equipe.'
+        />
 
         <ul className='mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-16 lg:grid-cols-3'>
           {benefits.map((benefit) => (

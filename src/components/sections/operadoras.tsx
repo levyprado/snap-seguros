@@ -1,10 +1,8 @@
 import { operadoras } from '@/data/operadoras'
 import Image from 'next/image'
 import Container from '../ui/container'
-import Body from '../ui/section/body'
-import Headline from '../ui/section/headline'
 import Section from '../ui/section/section'
-import Tagline from '../ui/section/tagline'
+import SectionHeader from '../ui/section/section-header'
 
 const logosCarousel = [...operadoras, ...operadoras]
 
@@ -12,14 +10,11 @@ export default function Operadoras() {
   return (
     <Section id='operadoras'>
       <Container className='text-center'>
-        <div className='space-y-2 lg:space-y-3'>
-          <Tagline>Representante Oficial</Tagline>
-          <Headline>As Melhores Operadoras do Brasil</Headline>
-          <Body>
-            Trabalhamos com as operadoras mais conceituadas para encontrar a
-            melhor opção para sua empresa.
-          </Body>
-        </div>
+        <SectionHeader
+          tagline='Representante Oficial'
+          headline='As Melhores Operadoras do Brasil'
+          body='Trabalhamos com as operadoras mais conceituadas para encontrar a melhor opção para sua empresa.'
+        />
 
         <div className='relative inline-flex w-full overflow-hidden py-12 lg:py-16'>
           <div className='absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-background to-transparent' />
