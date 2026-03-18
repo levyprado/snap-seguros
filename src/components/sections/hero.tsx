@@ -108,7 +108,7 @@ function CTABlock() {
 
 export default function Hero() {
   return (
-    <section className='relative flex min-h-[80svh] flex-col pb-24 lg:pb-0'>
+    <section className='relative flex min-h-[80svh] flex-col lg:pb-0'>
       <div className='absolute inset-0'>
         <Image
           src={heroImg}
