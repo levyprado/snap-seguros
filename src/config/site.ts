@@ -1,3 +1,5 @@
+export const SITE_URL = 'https://www.planodesaude.snapseguros.com.br'
+
 export const WHATSAPP_URL =
   'https://wa.me/5521992270686?text=Ol%C3%A1%2C+gostaria+de+receber+uma+cota%C3%A7%C3%A3o+para+plano+de+sa%C3%BAde+empresarial.'
 
