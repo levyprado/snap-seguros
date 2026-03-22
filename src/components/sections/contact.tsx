@@ -1,15 +1,18 @@
 import contactImg from '@/assets/images/contact.png'
 import { CONTACT, WHATSAPP_URL } from '@/config/site'
 import {
+  ArrowRight02Icon,
   CallIcon,
   ClockIcon,
+  DollarIcon,
   FlashIcon,
   HeadphonesIcon,
   LocationIcon,
   MailIcon,
-  ShieldIcon,
+  SentIcon,
 } from '@hugeicons/core-free-icons'
 import Image from 'next/image'
+import ContactForm from '../form/contact-form'
 import { Button } from '../ui/button'
 import Container from '../ui/container'
 import Icon from '../ui/icon'
@@ -29,63 +32,78 @@ export default function Contact() {
 
         <div className='mt-12 grid grid-cols-1 gap-8 lg:mt-16 lg:grid-cols-2 lg:gap-12'>
           <div className='space-y-6'>
-            <div className='flex flex-col gap-6 rounded-2xl border bg-secondary p-5 shadow-lg md:gap-10 md:p-8'>
-              <div className='flex flex-col items-center justify-center gap-1 text-center'>
-                <div className='inline-flex size-20 items-center justify-center rounded-full bg-whatsapp p-5 text-white'>
-                  <WhatsappIcon />
+            <div className='flex flex-col gap-6 rounded-2xl border bg-secondary p-5 shadow-lg md:p-8'>
+              <div className='flex items-center gap-4'>
+                <div className='inline-flex size-12 items-center justify-center rounded-full bg-whatsapp p-5 text-white md:size-14'>
+                  <WhatsappIcon className='size-6 md:size-7' />
                 </div>
-                <h3 className='text-2xl font-bold'>WhatsApp Business</h3>
-                <p className='text-muted-foreground'>
-                  Canal principal de atendimento
-                </p>
+                <div className='flex flex-col'>
+                  <h3 className='text-lg font-bold md:text-xl'>
+                    WhatsApp Business
+                  </h3>
+                  <p className='text-sm leading-tight text-muted-foreground'>
+                    Canal principal de atendimento
+                  </p>
+                </div>
               </div>
 
-              <div className='flex flex-col gap-4'>
-                <Button
-                  href={WHATSAPP_URL}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='border-whatsapp bg-whatsapp'
-                >
-                  Iniciar Conversa Agora
-                </Button>
-                <p className='text-center text-xs text-muted-foreground md:text-sm'>
-                  Clique no botão acima para ser atendido instantaneamente
-                </p>
-              </div>
+              <Button
+                href={WHATSAPP_URL}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='border-whatsapp bg-whatsapp px-0 text-base'
+              >
+                Iniciar Conversa Agora
+                <Icon icon={ArrowRight02Icon} />
+              </Button>
 
               <div className='grid grid-cols-3 gap-2 text-center md:gap-4'>
-                <div className='flex flex-col rounded-xl bg-background p-2 text-accent md:gap-1 md:p-4'>
+                <div className='flex flex-col rounded-xl bg-background p-2 text-accent'>
                   <Icon icon={FlashIcon} size={20} className='mx-auto mb-1' />
                   <p className='text-[10px] font-medium text-foreground md:text-xs'>
-                    Resposta em
+                    Resposta
                   </p>
-                  <span className='text-sm font-bold md:text-lg'>15 min</span>
+                  <span className='text-sm font-bold md:text-base'>15 min</span>
                 </div>
-                <div className='flex flex-col rounded-xl bg-background p-2 text-accent md:gap-1 md:p-4'>
+                <div className='flex flex-col rounded-xl bg-background p-2 text-accent'>
                   <Icon
                     icon={HeadphonesIcon}
                     size={20}
                     className='mx-auto mb-1'
                   />
-                  <p className='text-[10px] leading-tight font-medium text-foreground md:text-xs'>
+                  <p className='text-[10px] font-medium text-foreground md:text-xs'>
                     Atendimento
                   </p>
-                  <span className='text-sm leading-tight font-bold md:text-lg'>
-                    Humano
-                  </span>
+                  <span className='text-sm font-bold md:text-base'>Humano</span>
                 </div>
-                <div className='flex flex-col rounded-xl bg-background p-2 text-accent md:gap-1 md:p-4'>
-                  <Icon icon={ShieldIcon} size={20} className='mx-auto mb-1' />
-                  <p className='text-[10px] leading-tight font-medium text-foreground md:text-xs'>
+                <div className='flex flex-col rounded-xl bg-background p-2 text-accent'>
+                  <Icon icon={DollarIcon} size={20} className='mx-auto mb-1' />
+                  <p className='text-[10px] font-medium text-foreground md:text-xs'>
                     Cotação
                   </p>
-                  <span className='text-sm leading-tight font-bold md:text-lg'>
-                    Grátis
-                  </span>
+                  <span className='text-sm font-bold md:text-base'>Grátis</span>
                 </div>
               </div>
             </div>
+
+            <div className='flex flex-col gap-6 rounded-2xl border bg-secondary p-5 shadow-lg md:p-8'>
+              <div className='flex items-center gap-4'>
+                <div className='inline-flex size-12 items-center justify-center rounded-full bg-primary p-5 text-white md:size-14'>
+                  <Icon icon={SentIcon} className='size-6 shrink-0 md:size-7' />
+                </div>
+                <div className='flex flex-col'>
+                  <h3 className='text-lg font-bold md:text-xl'>
+                    Prefere Formulário?
+                  </h3>
+                  <p className='text-sm leading-tight text-muted-foreground'>
+                    Preencha e envie, entraremos em contato.
+                  </p>
+                </div>
+              </div>
+
+              <ContactForm />
+            </div>
+
             <div className='flex flex-col gap-3 md:flex-row'>
               <a
                 href={CONTACT.phoneTel}
