@@ -1,4 +1,3 @@
-import contactImg from '@/assets/images/contact.png'
 import { CONTACT, WHATSAPP_URL } from '@/config/site'
 import {
   ArrowRight02Icon,
@@ -11,7 +10,6 @@ import {
   MailIcon,
   SentIcon,
 } from '@hugeicons/core-free-icons'
-import Image from 'next/image'
 import ContactForm from '../form/contact-form'
 import { Button } from '../ui/button'
 import Container from '../ui/container'
@@ -86,24 +84,6 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className='flex flex-col gap-6 rounded-2xl border bg-secondary p-5 shadow-lg md:p-8'>
-              <div className='flex items-center gap-4'>
-                <div className='inline-flex size-12 items-center justify-center rounded-full bg-primary p-5 text-white md:size-14'>
-                  <Icon icon={SentIcon} className='size-6 shrink-0 md:size-7' />
-                </div>
-                <div className='flex flex-col'>
-                  <h3 className='text-lg font-bold md:text-xl'>
-                    Prefere Formulário?
-                  </h3>
-                  <p className='text-sm leading-tight text-muted-foreground'>
-                    Preencha e envie, entraremos em contato.
-                  </p>
-                </div>
-              </div>
-
-              <ContactForm />
-            </div>
-
             <div className='flex flex-col gap-3 md:flex-row'>
               <a
                 href={CONTACT.phoneTel}
@@ -136,29 +116,22 @@ export default function Contact() {
             </div>
           </div>
           <div className='space-y-6'>
-            <div className='relative max-h-[490px] overflow-hidden rounded-2xl shadow-lg'>
-              <Image
-                src={contactImg}
-                alt='Consultora Snap Seguros'
-                className='size-full object-cover'
-              />
-
-              <div className='absolute right-3 bottom-3 left-3 rounded-xl bg-background p-3 shadow-lg md:right-4 md:bottom-4 md:left-4 md:p-4'>
-                <div className='flex items-start gap-3 md:gap-4'>
-                  <div className='md:siz-12 flex size-10 shrink-0 items-center justify-center rounded-full bg-accent text-white'>
-                    <Icon icon={HeadphonesIcon} />
-                  </div>
-                  <div className='min-w-0'>
-                    <p className='text-sm font-bold text-foreground md:text-base'>
-                      Atendimento Personalizado
-                    </p>
-                    <p className='line-clamp-2 text-xs text-muted-foreground md:text-sm'>
-                      Consultores especializados prontos para encontrar o melhor
-                      plano para sua empresa
-                    </p>
-                  </div>
+            <div className='flex flex-col gap-6 rounded-2xl border bg-secondary p-5 shadow-lg md:p-8'>
+              <div className='flex items-center gap-4'>
+                <div className='inline-flex size-12 items-center justify-center rounded-full bg-primary p-5 text-white md:size-14'>
+                  <Icon icon={SentIcon} className='size-6 shrink-0 md:size-7' />
+                </div>
+                <div className='flex flex-col'>
+                  <h3 className='text-lg font-bold md:text-xl'>
+                    Prefere Formulário?
+                  </h3>
+                  <p className='text-sm leading-tight text-muted-foreground'>
+                    Preencha e envie, entraremos em contato.
+                  </p>
                 </div>
               </div>
+
+              <ContactForm />
             </div>
 
             <div className='flex flex-col gap-3 md:flex-row'>
