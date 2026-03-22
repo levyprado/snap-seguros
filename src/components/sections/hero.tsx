@@ -8,6 +8,7 @@ import {
   UserGroupIcon,
 } from '@hugeicons/core-free-icons'
 import Image from 'next/image'
+import ContactForm from '../form/contact-form'
 import { Button } from '../ui/button'
 import Container from '../ui/container'
 import Icon from '../ui/icon'
@@ -108,7 +109,7 @@ function CTABlock() {
 
 export default function Hero() {
   return (
-    <section className='relative flex min-h-[80svh] flex-col lg:pb-0'>
+    <section className='relative flex min-h-[85svh] flex-col lg:pb-0'>
       <div className='absolute inset-0'>
         <Image
           src={heroImg}
@@ -122,30 +123,46 @@ export default function Hero() {
       </div>
 
       <Container className='relative flex flex-1 items-center py-12 text-primary-foreground lg:py-16'>
-        <div className='flex w-full max-w-3xl flex-col gap-6 md:gap-8'>
-          <UrgencyBadge />
+        <div className='grid w-full grid-cols-1 gap-12 xl:grid-cols-2 xl:items-center'>
+          <div className='flex flex-col gap-6 md:gap-8'>
+            <UrgencyBadge />
 
-          <div className='flex flex-col gap-4'>
-            <h1 className='font-heading text-4xl leading-[1.1] font-extrabold text-balance md:text-5xl lg:text-6xl xl:text-7xl'>
-              Plano de Saúde <span className='text-accent'>Empresarial</span>
-              <br />
-              <span className='text-primary-foreground'>para MEI e PJ</span>
-            </h1>
-            <SocialProof />
+            <div className='flex flex-col gap-4'>
+              <h1 className='font-heading text-4xl leading-[1.1] font-extrabold text-balance md:text-5xl lg:text-6xl xl:text-7xl'>
+                Plano de Saúde <span className='text-accent'>Empresarial</span>
+                <br />
+                <span className='text-primary-foreground'>para MEI e PJ</span>
+              </h1>
+              <SocialProof />
+            </div>
+
+            <p className='max-w-3xl text-lg leading-relaxed text-primary-foreground/75'>
+              Compare{' '}
+              <strong className='text-primary-foreground'>
+                Bradesco, Amil, SulAmérica, Unimed e mais
+              </strong>{' '}
+              em um só lugar. Atendimento 100% personalizado.{' '}
+              <span className='font-semibold text-accent'>
+                Cotação gratuita em minutos.
+              </span>
+            </p>
+
+            <CTABlock />
           </div>
 
-          <p className='max-w-3xl text-lg leading-relaxed text-primary-foreground/75'>
-            Compare{' '}
-            <strong className='text-primary-foreground'>
-              Bradesco, Amil, SulAmérica, Unimed e mais
-            </strong>{' '}
-            em um só lugar. Atendimento 100% personalizado.{' '}
-            <span className='font-semibold text-accent'>
-              Cotação gratuita em minutos.
-            </span>
-          </p>
+          <div className='relative mx-auto w-full max-w-xl rounded-2xl border border-white/10 bg-background p-6 shadow-2xl backdrop-blur-md sm:p-8 xl:mx-0 xl:ml-auto'>
+            <div className='mb-6 flex flex-col gap-2'>
+              <h3 className='text-xl font-bold text-foreground'>
+                Receba sua cotação <span className='text-primary'>agora</span>
+              </h3>
+              <p className='text-sm text-muted-foreground'>
+                Preencha os dados e um especialista enviará a tabela
+                comparativa.
+              </p>
+            </div>
 
-          <CTABlock />
+            <ContactForm />
+          </div>
         </div>
       </Container>
     </section>
