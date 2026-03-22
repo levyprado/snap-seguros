@@ -1,15 +1,18 @@
-import { SentIcon, Users } from '@hugeicons/core-free-icons'
+import { SentIcon } from '@hugeicons/core-free-icons'
 import Icon from '../ui/icon'
+import { Input } from '../ui/input'
+import { Label } from '../ui/label'
+import { Select, SelectOption } from '../ui/select'
 
 export default function ContactForm() {
   return (
-    <form action='#' className='flex flex-col gap-4'>
+    <form action='#' className='flex flex-col gap-6'>
       <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
-        <div>
-          <label htmlFor='name' className=''>
+        <div className='space-y-2'>
+          <Label htmlFor='name' className=''>
             Nome *
-          </label>
-          <input
+          </Label>
+          <Input
             type='text'
             id='name'
             name='name'
@@ -18,11 +21,11 @@ export default function ContactForm() {
             className=''
           />
         </div>
-        <div>
-          <label htmlFor='phone' className=''>
+        <div className='space-y-2'>
+          <Label htmlFor='phone' className=''>
             Telefone/WhatsApp *
-          </label>
-          <input
+          </Label>
+          <Input
             type='tel'
             id='phone'
             name='phone'
@@ -34,36 +37,30 @@ export default function ContactForm() {
       </div>
 
       <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
-        <div>
-          <label htmlFor='company' className=''>
-            Nome da Empresa
-          </label>
-          <div className='relative'>
-            <Icon icon={Users} className='' />
-            <input
-              type='text'
-              id='company'
-              name='company'
-              placeholder='Sua empresa'
-              className=''
-            />
-          </div>
+        <div className='space-y-2'>
+          <Label htmlFor='email' className=''>
+            Email *
+          </Label>
+          <Input
+            type='email'
+            id='email'
+            name='email'
+            placeholder='seu@email.com'
+            className=''
+          />
         </div>
-        <div>
-          <label htmlFor='employees' className=''>
-            Qtd. de Vidas
-          </label>
-          <div className='relative'>
-            <Icon icon={Users} className='' />
-            <select id='employees' name='employees' className=''>
-              <option value=''>Selecione</option>
-              <option value='2-5'>2 a 5 vidas</option>
-              <option value='6-10'>6 a 10 vidas</option>
-              <option value='11-29'>11 a 29 vidas</option>
-              <option value='30-99'>30 a 99 vidas</option>
-              <option value='100+'>100+ vidas</option>
-            </select>
-          </div>
+        <div className='space-y-2'>
+          <Label htmlFor='employees' className=''>
+            Qtd. de Vidas *
+          </Label>
+          <Select id='employees' name='employees' className=''>
+            <SelectOption value=''>Selecione</SelectOption>
+            <SelectOption value='2-5'>2 a 5 vidas</SelectOption>
+            <SelectOption value='6-10'>6 a 10 vidas</SelectOption>
+            <SelectOption value='11-29'>11 a 29 vidas</SelectOption>
+            <SelectOption value='30-99'>30 a 99 vidas</SelectOption>
+            <SelectOption value='100+'>100+ vidas</SelectOption>
+          </Select>
         </div>
       </div>
 
@@ -76,7 +73,8 @@ export default function ContactForm() {
       </button>
 
       <p className='text-center text-[10px] text-muted-foreground md:text-xs'>
-        Ao enviar, você concorda com nossa politica de privacidade.
+        Ao enviar, você concorda que a Snap Seguros entre em contato para
+        apresentar sua cotação. Nenhum dado é compartilhado com terceiros.
       </p>
     </form>
   )
