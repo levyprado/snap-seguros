@@ -1,4 +1,4 @@
-import { SITE_NAME } from '@/config/site'
+import { SITE_NAME, SITE_URL } from '@/config/site'
 import type { Metadata } from 'next'
 import { Inter, Montserrat } from 'next/font/google'
 import './globals.css'
@@ -37,8 +37,13 @@ export const metadata: Metadata = {
     'corretora de plano de saúde',
     'Snap Seguros',
   ],
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: 'Plano de saúde',
   openGraph: {
     type: 'website',
+    url: SITE_URL,
     siteName: SITE_NAME,
     title,
     description,
